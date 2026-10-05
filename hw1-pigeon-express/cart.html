@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PigeonExpress — cart</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page">
+  <header class="site-header">
+    <a class="site-header__logo" href="index.html">PigeonExpress</a>
+  </header>
+
+  <main class="checkout">
+    <h1 class="visually-hidden">Your order</h1>
+
+    <a class="back-link checkout__back" href="index.html" aria-label="Back to the catalog">
+      <svg class="back-link__icon" viewBox="0 0 14 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true">
+        <polyline points="11.6,1.6 3,12 11.6,22.4"/>
+      </svg>
+    </a>
+
+    <form class="checkout__form" action="payment-success.html">
+      <dl class="order-summary">
+        <dt class="order-summary__label">Delivery bird</dt>
+        <dd class="order-summary__value">George</dd>
+        <dt class="order-summary__label">Price</dt>
+        <dd class="order-summary__value">3$</dd>
+      </dl>
+
+      <fieldset class="address-book">
+        <legend class="address-book__title">Sender’s address:</legend>
+        <ul class="address-book__options">
+          <li>
+            <label class="address-option">
+              <input class="address-option__radio" type="radio" name="sender" value="griboyedov" checked required>
+              <span class="address-option__text">Griboyedov Canal Embarkment, 123, room 317</span>
+            </label>
+          </li>
+          <li>
+            <label class="address-option">
+              <input class="address-option__radio" type="radio" name="sender" value="khudozhnikov" required>
+              <span class="address-option__text">Khudozhnikov street, 10, room 432</span>
+            </label>
+          </li>
+        </ul>
+        <button class="order-action address-book__add" type="button">+ add address</button>
+      </fieldset>
+
+      <fieldset class="address-book">
+        <legend class="address-book__title">Reciever’s address:</legend>
+        <ul class="address-book__options">
+          <li>
+            <label class="address-option">
+              <input class="address-option__radio" type="radio" name="receiver" value="kantemitovskaya" required>
+              <span class="address-option__text">Kantemitovskaya street, 3, room 3</span>
+            </label>
+          </li>
+        </ul>
+        <button class="order-action address-book__add" type="button">+ add address</button>
+      </fieldset>
+
+      <button class="order-action checkout__pay" type="submit">pay</button>
+    </form>
+  </main>
+</body>
+</html>
