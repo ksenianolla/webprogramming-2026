@@ -1,5 +1,5 @@
 
-- Верстка: 
+- Верстка: https://ksenianolla.github.io/webprogramming-2026/hw1-pigeon-express/
 - Макеты в Figma: https://www.figma.com/design/fbfnzs2LCKKWPWP3NoyUkq/PigeonExpress-ucd?node-id=59-5&t=OwGBW2Xgq1tdeJ1I-1
 
 Каталог птиц - [index.html](index.html) [catalog.png](mockups/catalog.png) 
