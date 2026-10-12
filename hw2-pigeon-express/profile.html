@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PigeonExpress — personal info</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/pages/profile.js"></script>
+</head>
+<body class="page">
+  <header class="site-header">
+    <a class="site-header__logo" href="index.html">PigeonExpress</a>
+    <nav class="site-header__nav site-header__nav--back" aria-label="Back">
+      <a class="back-link" href="index.html" aria-label="Back to the catalog">
+        <svg class="back-link__icon" viewBox="0 0 14 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true">
+          <polyline points="11.6,1.6 3,12 11.6,22.4"/>
+        </svg>
+      </a>
+    </nav>
+  </header>
+
+  <main class="profile">
+    <h1 class="visually-hidden">Personal info</h1>
+
+    <div class="profile__avatar">
+      <svg class="profile__avatar-icon" viewBox="0 0 36 46" fill="currentColor" aria-hidden="true">
+        <circle cx="18" cy="10" r="10"/>
+        <rect y="22" width="36" height="24" rx="12"/>
+      </svg>
+    </div>
+
+    <form class="profile__form" id="profile-form" novalidate>
+      <label class="profile__label" for="profile-name">Name</label>
+      <div class="profile__value">
+        <input class="profile__input" id="profile-name" name="name" type="text" autocomplete="given-name" maxlength="30" value="Ksenia" aria-describedby="profile-name-error">
+      </div>
+      <p class="profile__error" id="profile-name-error" aria-live="polite"></p>
+
+      <label class="profile__label" for="profile-surname">Surname</label>
+      <div class="profile__value">
+        <input class="profile__input" id="profile-surname" name="surname" type="text" autocomplete="family-name" maxlength="30" value="Ivanova" aria-describedby="profile-surname-error">
+      </div>
+      <p class="profile__error" id="profile-surname-error" aria-live="polite"></p>
+
+      <fieldset class="address-book" id="sender-addresses">
+        <legend class="address-book__title">Sender’s adresses</legend>
+      </fieldset>
+
+      <fieldset class="address-book" id="receiver-addresses">
+        <legend class="address-book__title">Recievers’ adresses</legend>
+      </fieldset>
+    </form>
+  </main>
+</body>
+</html>
