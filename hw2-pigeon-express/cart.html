@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PigeonExpress — cart</title>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/pages/cart.js"></script>
+</head>
+<body class="page">
+  <header class="site-header">
+    <a class="site-header__logo" href="index.html">PigeonExpress</a>
+  </header>
+
+  <main class="checkout">
+    <h1 class="visually-hidden">Your order</h1>
+
+    <a class="back-link checkout__back" href="index.html" aria-label="Back to the catalog">
+      <svg class="back-link__icon" viewBox="0 0 14 24" fill="none" stroke="currentColor" stroke-width="4" aria-hidden="true">
+        <polyline points="11.6,1.6 3,12 11.6,22.4"/>
+      </svg>
+    </a>
+
+    <form class="checkout__form" id="checkout-form" novalidate>
+      <dl class="order-summary">
+        <dt class="order-summary__label">Delivery bird</dt>
+        <dd class="order-summary__value" id="cart-bird"></dd>
+        <dt class="order-summary__label">Price</dt>
+        <dd class="order-summary__value" id="cart-price"></dd>
+      </dl>
+
+      <fieldset class="address-book" id="sender-addresses">
+        <legend class="address-book__title">Sender’s address:</legend>
+      </fieldset>
+
+      <fieldset class="address-book" id="receiver-addresses">
+        <legend class="address-book__title">Reciever’s address:</legend>
+      </fieldset>
+
+      <p class="checkout__error" id="checkout-error" role="alert" hidden></p>
+      <button class="order-action checkout__pay" id="checkout-pay" type="submit">pay</button>
+    </form>
+
+    <section class="checkout__empty" id="cart-empty" aria-labelledby="cart-empty-title" hidden>
+      <h2 class="checkout__empty-title" id="cart-empty-title">Your cart is empty</h2>
+      <a class="order-action checkout__empty-action" id="cart-empty-action" href="index.html">choose a bird</a>
+    </section>
+  </main>
+</body>
+</html>
