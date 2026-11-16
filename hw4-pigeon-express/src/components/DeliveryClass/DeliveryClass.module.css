@@ -1,0 +1,49 @@
+.delivery-class {
+  margin-bottom: 14px;
+}
+
+.title {
+  margin: 0 var(--page-gutter) 14px;
+  font-family: var(--font-display);
+  font-size: var(--font-size-display);
+  font-weight: 400;
+  line-height: 1;
+  word-spacing: normal;
+}
+
+.birds {
+  display: flex;
+  gap: var(--bird-card-gap);
+  height: calc(var(--bird-card-height) + 36px);
+  margin: 0;
+  padding: 0 var(--page-gutter);
+  overflow-x: auto;
+  overflow-y: hidden;
+  list-style: none;
+  scroll-padding-inline: var(--page-gutter);
+  scroll-snap-type: x proximity;
+  scrollbar-color: var(--color-purple-blue) transparent;
+  scrollbar-width: thin;
+}
+
+.bird {
+  flex: none;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 1024px) {
+  .delivery-class {
+    display: grid;
+    grid-template-columns: 203px minmax(0, 1fr);
+    padding-left: 22px;
+  }
+
+  .title {
+    margin: -6px 0 0;
+  }
+
+  .birds {
+    padding: 0;
+    scroll-padding-inline: 0;
+  }
+}
