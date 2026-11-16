@@ -1,0 +1,19 @@
+.page {
+  min-height: 100vh;
+}
+
+.dimmed {
+  --surface-brand: var(--color-gray);
+  --bird-photo-opacity: 0.5;
+  --select-mark-color: var(--color-gray);
+}
+
+.catalog {
+  padding: 24px 0;
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    padding-top: 30px;
+  }
+}
