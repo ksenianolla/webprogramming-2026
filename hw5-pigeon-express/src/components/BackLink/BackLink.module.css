@@ -1,0 +1,19 @@
+.back-link {
+  display: flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 40px;
+  color: var(--color-black);
+}
+
+.back-link:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.icon {
+  width: 14px;
+  height: 24px;
+}

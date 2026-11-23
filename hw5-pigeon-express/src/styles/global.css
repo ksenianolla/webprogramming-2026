@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Passion One";
+  src: url("../assets/fonts/passion-one-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Crimson Pro";
+  src: url("../assets/fonts/crimson-pro-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Archivo Black";
+  src: url("../assets/fonts/archivo-black-400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-purple-blue: #4f55fd;
+  --color-green: #26a300;
+  --color-gray: #b1b1b1;
+  --color-white: #fff;
+  --color-black: #0e0e0e;
+  --color-dark-blue: #130456;
+  --color-bright-blue: #2000af;
+  --color-middle-gray: #8a8a8a;
+  --color-dark-gray: #5e5e5e;
+  --color-logo-shade: #b4b4c6;
+
+  --surface-brand: var(--color-purple-blue);
+  --bird-photo-opacity: 1;
+  --avatar-opacity: 0.8;
+  --select-mark-color: var(--color-green);
+
+  --font-display: "Passion One", Impact, "Arial Narrow", sans-serif;
+  --font-text: "Crimson Pro", Georgia, "Times New Roman", serif;
+  --font-action: "Archivo Black", "Arial Black", Arial, sans-serif;
+  --font-size-logo: 32px;
+  --font-size-display: 28px;
+  --font-size-text: 22px;
+  --font-size-action: 24px;
+  --line-height-text: 1.25;
+
+  --header-height: 50px;
+  --page-gutter: 20px;
+  --field-gap: 20px;
+  --address-list-gap: 20px;
+  --control-height: 54px;
+  --action-height: 56px;
+  --action-max-width: 430px;
+  --bird-card-width: 208px;
+  --bird-card-height: calc(var(--bird-card-width) * 1.072);
+  --bird-card-gap: 16px;
+  --bird-card-inset: 16px;
+  --bird-caption-gap: 14px;
+  --dialog-radius: 28px;
+  --radius-action: 5px;
+  --shadow-button: 0 4px 4px rgb(0 0 0 / 25%);
+  --focus-ring: 3px solid var(--color-dark-blue);
+}
+
+@media (min-width: 600px) {
+  :root {
+    --font-size-display: 32px;
+    --font-size-text: 26px;
+    --font-size-action: 35px;
+    --page-gutter: 40px;
+    --field-gap: 32px;
+    --address-list-gap: 36px;
+    --control-height: 62px;
+    --action-height: 64px;
+    --bird-card-width: 264px;
+    --bird-card-gap: 36px;
+    --bird-card-inset: 58px;
+    --bird-caption-gap: 27px;
+    --dialog-radius: 40px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-white);
+  color: var(--color-black);
+  font-family: var(--font-text);
+  font-size: var(--font-size-text);
+  font-weight: 400;
+  line-height: var(--line-height-text);
+  font-variant-numeric: oldstyle-nums;
+  word-spacing: 0.07em;
+  -webkit-text-size-adjust: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}

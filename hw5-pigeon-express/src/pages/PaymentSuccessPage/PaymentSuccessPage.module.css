@@ -1,0 +1,139 @@
+.result {
+  display: grid;
+  grid-template-areas:
+    "owl     dove"
+    "title   title"
+    "message message"
+    "wait    wait"
+    "alert   alert"
+    "pigeon  pigeon";
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 28px 16px;
+  padding: 24px var(--page-gutter) 0;
+  overflow: hidden;
+  font-family: var(--font-display);
+  font-size: var(--font-size-display);
+  line-height: 1.1;
+  text-align: center;
+  word-spacing: normal;
+}
+
+.line {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  font-size: inherit;
+  font-weight: 400;
+  text-wrap: balance;
+}
+
+.title {
+  grid-area: title;
+}
+
+.message {
+  grid-area: message;
+  word-spacing: 0.07em;
+}
+
+.wait {
+  grid-area: wait;
+}
+
+.track {
+  color: inherit;
+  text-decoration: none;
+}
+
+.track:hover {
+  text-decoration: underline;
+}
+
+.track:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.bird {
+  height: auto;
+}
+
+.owl {
+  grid-area: owl;
+  justify-self: start;
+  width: clamp(88px, 22vw, 143px);
+}
+
+.dove {
+  grid-area: dove;
+  justify-self: end;
+  width: clamp(128px, 34vw, 223px);
+}
+
+.pigeon {
+  grid-area: pigeon;
+  justify-self: end;
+  width: clamp(220px, 56vw, 360px);
+}
+
+.alert {
+  grid-area: alert;
+  justify-self: center;
+  margin-top: 0;
+}
+
+@media (min-width: 1200px) {
+  .result {
+    grid-template-areas: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 236px) auto;
+    gap: 0;
+    padding: 29px 0 64px;
+  }
+
+  .line,
+  .bird,
+  .alert {
+    grid-area: auto;
+    grid-column: 1;
+  }
+
+  .title {
+    grid-row: 1;
+  }
+
+  .message {
+    grid-row: 2;
+  }
+
+  .wait {
+    grid-row: 3;
+  }
+
+  .owl {
+    grid-row: 1;
+    width: 143px;
+    margin: 50px 0 0 11.2%;
+  }
+
+  .dove {
+    grid-row: 1;
+    width: 223px;
+    margin: 0 11.7% 12px 0;
+  }
+
+  .pigeon {
+    grid-row: 2 / span 2;
+    align-self: start;
+    width: 362px;
+    margin: 101px 3.9% 0 0;
+  }
+
+  .alert {
+    grid-row: 4;
+    justify-self: start;
+    max-width: 560px;
+    margin-left: 15%;
+  }
+}
