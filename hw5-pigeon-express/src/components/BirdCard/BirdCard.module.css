@@ -1,0 +1,64 @@
+.card {
+  display: grid;
+  grid-template-areas:
+    "photo photo photo"
+    "name  price select";
+  grid-template-columns: auto auto 1fr;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  column-gap: var(--bird-caption-gap);
+  width: var(--bird-card-width);
+  height: var(--bird-card-height);
+  padding-bottom: 17px;
+  background: var(--surface-brand);
+  color: var(--color-white);
+}
+
+.photo {
+  grid-area: photo;
+  align-self: end;
+  justify-self: center;
+  width: auto;
+  height: calc(var(--bird-card-width) * 0.674);
+  margin-bottom: 10px;
+  opacity: var(--bird-photo-opacity);
+}
+
+.heavy .photo {
+  height: calc(var(--bird-card-width) * 0.754);
+  margin-bottom: 6px;
+}
+
+.name {
+  grid-area: name;
+  margin: 0 0 0 var(--bird-card-inset);
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.price {
+  grid-area: price;
+  margin: 0;
+}
+
+.select {
+  grid-area: select;
+  justify-self: end;
+  width: 38px;
+  height: 38px;
+  margin-right: 12px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  background:
+    linear-gradient(var(--select-mark-color), var(--select-mark-color)) center / 30px 6px no-repeat,
+    linear-gradient(var(--select-mark-color), var(--select-mark-color)) center / 6px 30px no-repeat,
+    var(--color-white);
+}
+
+.select:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}

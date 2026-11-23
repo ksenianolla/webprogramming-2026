@@ -1,0 +1,31 @@
+.value {
+  flex-wrap: wrap;
+  gap: 4px 16px;
+}
+
+.muted {
+  color: var(--color-dark-gray);
+}
+
+.retry {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--color-bright-blue);
+  cursor: pointer;
+  font: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.retry:focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.note {
+  max-width: 720px;
+  margin: calc(var(--field-gap) * -0.5) 0 var(--field-gap);
+  color: var(--color-bright-blue);
+  font-size: 0.8em;
+}

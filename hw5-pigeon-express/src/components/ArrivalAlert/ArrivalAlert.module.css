@@ -1,0 +1,29 @@
+.alert {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  max-width: 720px;
+  margin-top: 40px;
+  color: var(--color-black);
+  font-family: var(--font-text);
+  font-size: var(--font-size-text);
+  line-height: var(--line-height-text);
+  text-align: left;
+  word-spacing: 0.07em;
+}
+
+.text {
+  flex: 1 1 280px;
+  margin: 0;
+}
+
+.text-muted {
+  color: var(--color-dark-gray);
+}
+
+.button {
+  flex: 0 0 auto;
+  width: auto;
+  padding: 4px 28px;
+}
